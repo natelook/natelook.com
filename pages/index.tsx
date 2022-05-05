@@ -20,8 +20,21 @@ export default function Home({ projects, config }: HomePageProps) {
     <div className=''>
       <div className='max-w-xl mx-auto'>
         <div className='mb-12'>
-          <h1>Nate Look</h1>
-          <h2>Web Developer</h2>
+          <div className='flex justify-between'>
+            <div>
+              <h1>Nate Look</h1>
+              <h2>Web Developer</h2>
+            </div>
+            <div className='mr-5 drop-shadow-lg'>
+              <Image
+                src='/headshot500.jpg'
+                height='100'
+                width='100'
+                alt='Headshot of Nate'
+                className='rounded-full'
+              />
+            </div>
+          </div>
           <p className='text-gray-light leading-7'>{config.heroText}</p>
         </div>
         <div>

@@ -7,7 +7,7 @@ const Footer = () => (
       &copy; 2022 Nate Look - All Rights Reserved
     </p>
     <ul className='flex space-x-4'>
-      <li>
+      {/* <li>
         <Link href='/'>
           <a>
             <Image
@@ -18,18 +18,16 @@ const Footer = () => (
             />
           </a>
         </Link>
-      </li>
+      </li> */}
       <li>
-        <Link href='/'>
-          <a>
-            <Image
-              alt='Github Logo'
-              src='/github.svg'
-              height='17px'
-              width='17px'
-            />
-          </a>
-        </Link>
+        <a href='https://github.com/natelook' rel='noreferrer' target='_blank'>
+          <Image
+            alt='Github Logo'
+            src='/github.svg'
+            height='17px'
+            width='17px'
+          />
+        </a>
       </li>
     </ul>
   </footer>
