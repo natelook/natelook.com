@@ -1,6 +1,11 @@
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { ProjectProps } from '../pages/projects';
 import { MdLaunch } from 'react-icons/md';
+
+const item = {
+  hidden: { opacity: 0, y: -10 },
+  show: { opacity: 1, y: 0 },
+};
 
 export default function ProjectCard({
   title,
@@ -10,7 +15,7 @@ export default function ProjectCard({
   displayUrl,
 }: ProjectProps) {
   return (
-    <div>
+    <motion.div variants={item}>
       <div className='mb-0.5'>
         <h4 className='text-2xl font-bold m-0 leading-none'>{title}</h4>
 
@@ -34,6 +39,6 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

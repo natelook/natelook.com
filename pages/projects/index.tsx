@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import ProjectsGrid from '../../components/ProjectsGrid';
 import { PROJECTS_QUERY } from '../../lib/queries';
@@ -20,7 +21,14 @@ export default function ProjectPage({
 }) {
   return (
     <div>
-      <h1 className='mb-10'>Projects</h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className='mb-10'
+      >
+        Projects
+      </motion.h1>
       <div className='pb-20'>
         <ProjectsGrid projects={projects} />
       </div>
