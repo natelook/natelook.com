@@ -20,12 +20,12 @@ export default function Home({ projects, config }: HomePageProps) {
     <div className=''>
       <div className='max-w-xl mx-auto'>
         <div className='mb-12'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-center py-10'>
             <div>
               <h1>Nate Look</h1>
               <h2>Web Developer</h2>
             </div>
-            <div className='mr-5 drop-shadow-lg'>
+            <div className='md:mr-5 drop-shadow-lg'>
               <Image
                 src='/headshot500.jpg'
                 height='100'

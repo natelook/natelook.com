@@ -15,11 +15,15 @@
   }
 
   h1 {
-    @apply text-7xl font-bold leading-none tracking-tight;
+    @apply text-5xl md:text-7xl font-bold leading-none tracking-tight;
   }
 
   h2 {
     @apply font-vcr text-yellow text-2xl leading-none mb-4;
+  }
+
+  .wrapper {
+    @apply px-5 md:px-0;
   }
 
   .font-vcr {

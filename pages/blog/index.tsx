@@ -7,7 +7,7 @@ import { PostProps } from '../../lib/types';
 
 export default function BlogPage({ posts }: { posts: PostProps[] }) {
   return (
-    <div>
+    <div className=''>
       <h1>Blog</h1>
       <div className='mt-10 mb-24'>
         {posts.map((post) => (

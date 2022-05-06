@@ -18,7 +18,7 @@ export default function ProjectCard({
           target='_blank'
           href={url}
           rel='noreferrer'
-          className='text-yellow font-vcr flex space-x-3 items-center pr-5'
+          className='text-yellow font-vcr flex space-x-1 items-center pr-5'
         >
           <span>{displayUrl ? displayUrl.slice(8) : url.slice(8)}</span>
           <span className='text-gray-medium'>
