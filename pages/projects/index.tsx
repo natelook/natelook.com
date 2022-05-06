@@ -9,6 +9,7 @@ export interface ProjectProps {
   description: string;
   name: string;
   url: string;
+  displayUrl?: string;
   tags: string[];
 }
 

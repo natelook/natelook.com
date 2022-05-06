@@ -6,6 +6,7 @@ export const PROJECTS_QUERY = groq`
   title,
   description,
   url,
+  displayUrl,
   tags
 }
 `;
