@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { POSTS_QUERY } from '../../lib/queries';
 import client from '../../lib/sanity';
@@ -5,11 +6,35 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import { PostProps } from '../../lib/types';
 
+const staggerAnimationContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { when: 'beforeChildren', staggerChildren: 0.3, delay: 0.7 },
+  },
+};
+
+const animationItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export default function BlogPage({ posts }: { posts: PostProps[] }) {
   return (
     <div className=''>
-      <h1>Blog</h1>
-      <div className='mt-10 mb-24'>
+      <motion.h1
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        Blog
+      </motion.h1>
+      <motion.div
+        variants={staggerAnimationContainer}
+        initial='hidden'
+        animate='show'
+        className='mt-10 mb-24'
+      >
         {posts.map((post) => (
           <Link href={`/blog/${post.slug.current}`} key={post._id}>
             <a>
@@ -24,7 +49,7 @@ export default function BlogPage({ posts }: { posts: PostProps[] }) {
             </a>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
