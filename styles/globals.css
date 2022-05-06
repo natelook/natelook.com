@@ -29,4 +29,12 @@
   .font-vcr {
     @apply uppercase;
   }
+
+  .contact-button {
+    @apply flex items-center space-x-3 text-2xl;
+  }
+
+  .contact-button a {
+    @apply hover:text-blue-light text-lg;
+  }
 }

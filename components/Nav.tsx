@@ -6,6 +6,7 @@ const navigationLinks = [
   { name: 'Home', slug: '/' },
   { name: 'Blog', slug: '/blog' },
   { name: 'Projects', slug: '/projects' },
+  { name: 'Contact', slug: '/contact' },
 ];
 
 const Nav = () => {
@@ -19,7 +20,7 @@ const Nav = () => {
               key={link.slug}
               className={classnames('font-vcr text-lg', {
                 'text-white': router.pathname == link.slug,
-                'text-gray-light': router.pathname != link.slug,
+                'text-gray-medium': router.pathname != link.slug,
               })}
             >
               <Link href={link.slug}>
